@@ -13,8 +13,8 @@ return new class extends Migration
     {
         if(!Schema::hasTable('movie_genre')){
         Schema::create('movie_genre', function (Blueprint $table) {
-            $table->foreignId('movie_id')->constrained()->onDelete('cascade');
-            $table->foreignId('genre_id')->constrained()->onDelete('cascade');
+            $table->foreignId('movie_id')->constrained('movie')->onDelete('cascade');
+            $table->foreignId('genre_id')->constrained('genre')->onDelete('cascade');
             $table->primary(['movie_id', 'genre_id']);
         });
     }}
