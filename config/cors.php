@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Cross-Origin Resource Sharing (CORS) Configuration
@@ -30,14 +29,10 @@ return [
     'max_age' => 0,
 
     'supports_credentials' => true,
-'stateful' => [
-    'localhost:3000', // Your Nuxt dev domain
-    '127.0.0.1:3000',
-],
+    'stateful' => [
+        'localhost:3000', // Your Nuxt dev domain
+        '127.0.0.1:3000',
+    ],
 
-'paths' => ['api/*', 'sanctum/csrf-cookie', 'login', 'logout'],
-'allowed_methods' => ['*'],
-'allowed_origins' => ['*'],
-'allowed_headers' => ['*'],
-'supports_credentials' => true,
+    'paths' => ['api/*', 'sanctum/csrf-cookie', 'login', 'logout'],
 ];
